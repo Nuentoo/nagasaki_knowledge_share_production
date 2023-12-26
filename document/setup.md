@@ -5,7 +5,7 @@
 Node.js-v18.14.1 またはそれ以上。  
 nodenv でバージョンアップが必要  
   ↓  
-nodenv local v18.14.1  
+nodenv local 18.14.1  
 
 ### vscodeの拡張機能
 [astro_build](https://docs.astro.build/ja/editor-setup/)
