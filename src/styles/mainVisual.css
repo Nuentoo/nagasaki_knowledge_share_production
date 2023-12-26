@@ -1,0 +1,19 @@
+/* MainVisual style SP */
+
+.mainVisual {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP0/s+gDAAEVgFvKoQ2HwAAAABJRU5ErkJggg==);
+    display: flex;
+    height: 517px;
+    width: 100%;
+    .title {
+        font-size: 100px;
+        align-self: flex-end;
+    }
+}
+
+
+/* MainVisual style PC */
+
+@media screen and (min-width: 636px) {
+
+}

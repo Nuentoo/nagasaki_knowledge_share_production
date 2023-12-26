@@ -1,0 +1,9 @@
+---
+const { platform, username , platformName } = Astro.props;
+---
+<!-- ここにHTML -->
+<li class="footer_list">
+  <a href={`https://www.${platform}.com/${username}`}>{platformName}</a>
+</li>
+
+<!-- styleは global.css -->

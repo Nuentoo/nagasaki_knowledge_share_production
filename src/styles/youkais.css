@@ -1,0 +1,18 @@
+/* youkais style SP */
+
+.youkais {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP0/s+gDAAEVgFvKoQ2HwAAAABJRU5ErkJggg==);
+    height: 1000px;
+    width: 100%;
+    .subTitle {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+
+/* Youkais style PC */
+
+@media screen and (min-width: 636px) {
+
+}
