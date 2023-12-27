@@ -1,8 +1,62 @@
 ---
+const eventComponents = [{
+    eventName: "波佐見陶器祭り",
+    description: "陶器市のイベント。鋳込み・絵付（有料）体験などのコーナーも",
+    image: "",
+    season: "春",
+    area: "波佐見町",
+  },{
+    eventName: "平戸じゃんがら",
+    description: "平戸に古くから伝わる先祖供養と、豊年祈願の踊り「じゃんがら」を披露するイベント",
+    image: "",
+    season: "夏",
+    area: "平戸市",
+  },{
+    eventName: "対馬アリラン祭り",
+    description: "江戸時代の「朝鮮通信使」を再現した衣装の行列などの催しが行われるイベント",
+    image: "",
+    season: "夏",
+    area: "対馬市",
+  },{
+    eventName: "チャンココ",
+    description: "花笠、腰みの、太鼓を持った姿で念仏踊り「チャンココ」を踊り、先祖の御霊を鎮めるイベント",
+    image: "",
+    season: "夏",
+    area: "五島市",
+  },{
+    eventName: "精霊流し",
+    description: "故人の霊を弔うために手作りした船を曳きながら街中を練り歩くイベント",
+    image: "",
+    season: "夏",
+    area: "長崎市",
+  },{
+    eventName: "オーモンデー",
+    description: "カラフルな衣装を身に付け、かねの音に合わせて念仏踊り「オーモンデー」を踊るイベント",
+    image: "",
+    season: "夏",
+    area: "五島市",
+  },{
+    eventName: "へトマト",
+    description: "「豊作」「大漁」「子孫繁栄」を祈願したイベント。大草履を担いで練り歩くなどの催しが行われる",
+    image: "",
+    season: "冬",
+    area: "五島市",
+  }];
 ---
 <!-- ここにHTML -->
 <section class="events">
     <h2 class="eventsSubtitle subTitle">イベント</h2>
+    <ul>
+        {eventComponents.map((eventComponent)=>(<li>
+            <img src="{image}" alt="">
+            <h3>{eventComponent.eventName}</h3>
+            <p>{eventComponent.description}</p>
+            <ul>
+                <li>{eventComponent.season}</li>
+                <li>{eventComponent.area}</li>
+            </ul>
+        </li>))}
+    </ul>
 </section>
 
 <!-- styleは events.css -->
