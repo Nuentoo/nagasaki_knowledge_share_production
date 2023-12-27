@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.3.1",
     "@astrojs/preact": "^3.0.1",
     "astro": "^4.0.3",
+    "microcms-js-sdk": "^2.7.0",
     "preact": "^10.19.3",
     "typescript": "^5.3.3"
   }

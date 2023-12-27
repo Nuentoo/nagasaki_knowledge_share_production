@@ -1,14 +1,45 @@
 ---
+// microCMSの呼び出し
+import { getCats } from "../libs/microcms";
+const response = await getCats({ fields: ['image', 'caption'] });
 ---
-<!-- ここにHTML -->
+
 <section class="bentTailsCats">
-    <h2 class="subTitle">尾曲猫</h2>
+  <h2 class="subTitle">尾曲ネコ</h2>
+
+  <div class="b-carousel">
+    <ul class="b-carousel__list">
+
+      {
+        response.contents.map((cat: any) => (
+          <li class="b-carousel__item">
+            <figure >
+              <img src={cat.image.url} alt="" class="b-carousel__img">
+              <figcaption  class="b-carousel__caption">{cat.caption}</figcaption>
+            </figure>
+          </li>
+        ))
+      }
+
+    </ul>
+  </div>
+
+  <p class="b-carousel__text">
+    長崎の尾曲ネコは、しっぽの形が特徴的！
+    <br>しっぽがまるでS字みたいに曲がっているから、「尾曲（おまがり）ネコ」と呼ばれています。
+  </p>
+  <p class="b-carousel__text">
+    尾曲ネコは、実は長崎の歴史と深〜く関わっています。
+    <br>長崎はかつてオランダや中国などの外国船が立ち寄る貿易港として栄えていました。
+    <br>インドネシアのジャカルタからネズミ駆除要員として連れてこられた猫が地元の猫と交配し、現在の長崎の尾曲がり猫の特徴が生まれたと言われています。
+  </p>
+  <p class="b-carousel__text">
+    「尾曲がり猫」のしっぽには3パターンあり、かぎ型に曲がった「曲がりしっぽ」、長さが短い「短尾」、その短いしっぽが巻いて団子上になった「お団子しっぽ」があります。
+  </p>
+  <p class="b-carousel__text">地域の猫カフェや猫の神社など、尾曲がり猫と触れ合える場所もありますので、ねこ好きさんはぜひ訪れてみてください。</p>
 </section>
 
-<!-- styleは bentTailCats.css -->
-
-<!-- DOM操作は carousel.js -->
 <script>
-    import { caloselBentTailCats } from "../scripts/carousel.js";
-    caloselBentTailCats();
+  import { caloselBentTailCats } from "../scripts/carousel.js";
+  caloselBentTailCats();
 </script>
