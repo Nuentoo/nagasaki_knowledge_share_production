@@ -1,18 +1,66 @@
 /* BentTailCats style SP */
 
 .bentTailsCats {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z5CtDAAE/wGPm2umRwAAAABJRU5ErkJggg==);
-    height: 1000px;
-    width: 100%;
-    .subTitle {
-        text-align: center;
-        font-size: 30px;
-    }
+  width: 100%;
+  padding: 72px 0;
 }
 
+.b-subTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #080808;
+}
+
+.b-carousel {
+  margin-bottom: 40px;
+}
+
+.b-carousel__list {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.b-carousel__item {
+  width: 320px;
+  min-width: 320px;
+}
+
+.b-carousel__img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.b-carousel__caption {
+  padding: 12px;
+  height: 124px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #627d31;
+  border-radius: 0 0 12px 12px;
+}
+
+.b-carousel__text {
+  padding: 0 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.b-carousel__text:last-child {
+  margin-bottom: 0;
+}
 
 /* BentTailCats style PC */
 
 @media screen and (min-width: 636px) {
-
 }
