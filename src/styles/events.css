@@ -4,12 +4,12 @@
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z5CtDAAE/wGPm2umRwAAAABJRU5ErkJggg==);
     height: 1000px;
     width: 100%;
-    .subTitle {
-        text-align: center;
-        font-size: 30px;
-    }
 }
 
+.events__subTitle {
+    text-align: center;
+    font-size: 30px;
+}
 
 /* Events style PC */
 
