@@ -52,7 +52,8 @@ const eventPosts = [{
     <ul class="events__seasonList"><li class="seasonItem">{uniqueSeason}</li></ul>
     <ul class="events__areaList"><li class="areaItem">{uniqueArea}</li></ul>
     <ul class="events__postList">
-        {eventPosts.map((eventPost)=>(<li class="events__postItem">
+        {eventPosts.map((eventPost)=>(
+          <li class="events__postItem">
             <img class="events__img" src="{image}" alt="">
             <h3 class="events__name">{eventPost.eventName}</h3>
             <p class="events__description">{eventPost.description}</p>
@@ -60,7 +61,8 @@ const eventPosts = [{
                 <li class="seasonItem">{eventPost.season}</li>
                 <li class="areaItem">{eventPost.area}</li>
             </ul>
-        </li>))}
+        </li>
+        ))}
     </ul>
 </section>
 
