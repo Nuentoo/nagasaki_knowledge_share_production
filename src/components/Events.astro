@@ -43,15 +43,15 @@ const eventPosts = [{
     area: "五島市",
   }];
 
-  const uniqueSeason = [...new Set(eventPosts.map((eventPost)=>eventPost.season))]
-  const uniqueArea = [...new Set(eventPosts.map((eventPost)=>eventPost.area))]
+  const uniqueSeasons = [...new Set(eventPosts.map((eventPost)=>eventPost.season))]
+  const uniqueAreas = [...new Set(eventPosts.map((eventPost)=>eventPost.area))]
 ---
 <!-- ここにHTML -->
 <section class="events">
     <h2 class="events__subTitle subTitle">イベント</h2>
     <div class="events__tagWrapper">
-      <ul class="events__seasonList"><li class="tagItem">{uniqueSeason}</li></ul>
-      <ul class="events__areaList"><li class="tagItem">{uniqueArea}</li></ul>
+      <ul class="events__seasonList">{uniqueSeasons.map((uniqueSeason)=><li class="tagItem">{uniqueSeason}</li>)}</ul>
+      <ul class="events__areaList">{uniqueAreas.map((uniqueArea)=><li class="tagItem">{uniqueArea}</li>)}</ul>
     </div>
     <div class="events__postWrapper">
       <ul class="events__postList">
