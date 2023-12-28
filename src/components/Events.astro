@@ -1,5 +1,5 @@
 ---
-const eventComponents = [{
+const eventPosts = [{
     eventName: "波佐見陶器祭り",
     description: "陶器市のイベント。鋳込み・絵付（有料）体験などのコーナーも",
     image: "",
@@ -43,8 +43,8 @@ const eventComponents = [{
     area: "五島市",
   }];
 
-  const uniqueSeason = [...new Set(eventComponents.map((eventComponent)=>eventComponent.season))]
-  const uniqueArea = [...new Set(eventComponents.map((eventComponent)=>eventComponent.area))]
+  const uniqueSeason = [...new Set(eventPosts.map((eventPost)=>eventPost.season))]
+  const uniqueArea = [...new Set(eventPosts.map((eventPost)=>eventPost.area))]
 ---
 <!-- ここにHTML -->
 <section class="events">
@@ -52,13 +52,13 @@ const eventComponents = [{
     <ul><li>{uniqueSeason}</li></ul>
     <ul><li>{uniqueArea}</li></ul>
     <ul>
-        {eventComponents.map((eventComponent)=>(<li>
+        {eventPosts.map((eventPost)=>(<li>
             <img src="{image}" alt="">
-            <h3>{eventComponent.eventName}</h3>
-            <p>{eventComponent.description}</p>
+            <h3>{eventPost.eventName}</h3>
+            <p>{eventPost.description}</p>
             <ul>
-                <li>{eventComponent.season}</li>
-                <li>{eventComponent.area}</li>
+                <li>{eventPost.season}</li>
+                <li>{eventPost.area}</li>
             </ul>
         </li>))}
     </ul>
