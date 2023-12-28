@@ -42,10 +42,15 @@ const eventComponents = [{
     season: "冬",
     area: "五島市",
   }];
+
+  const uniqueSeason = [...new Set(eventComponents.map((eventComponent)=>eventComponent.season))]
+  const uniqueArea = [...new Set(eventComponents.map((eventComponent)=>eventComponent.area))]
 ---
 <!-- ここにHTML -->
 <section class="events">
     <h2 class="eventsSubtitle subTitle">イベント</h2>
+    <ul><li>{uniqueSeason}</li></ul>
+    <ul><li>{uniqueArea}</li></ul>
     <ul>
         {eventComponents.map((eventComponent)=>(<li>
             <img src="{image}" alt="">
