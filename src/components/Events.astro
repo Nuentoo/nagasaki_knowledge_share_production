@@ -48,17 +48,17 @@ const eventPosts = [{
 ---
 <!-- ここにHTML -->
 <section class="events">
-    <h2 class="eventsSubtitle subTitle">イベント</h2>
-    <ul><li>{uniqueSeason}</li></ul>
-    <ul><li>{uniqueArea}</li></ul>
-    <ul>
-        {eventPosts.map((eventPost)=>(<li>
-            <img src="{image}" alt="">
-            <h3>{eventPost.eventName}</h3>
-            <p>{eventPost.description}</p>
-            <ul>
-                <li>{eventPost.season}</li>
-                <li>{eventPost.area}</li>
+    <h2 class="events__subTitle subTitle">イベント</h2>
+    <ul class="events__seasonList"><li class="seasonItem">{uniqueSeason}</li></ul>
+    <ul class="events__areaList"><li class="areaItem">{uniqueArea}</li></ul>
+    <ul class="events__postList">
+        {eventPosts.map((eventPost)=>(<li class="events__postItem">
+            <img class="events__img" src="{image}" alt="">
+            <h3 class="events__name">{eventPost.eventName}</h3>
+            <p class="events__description">{eventPost.description}</p>
+            <ul class="events__tag">
+                <li class="seasonItem">{eventPost.season}</li>
+                <li class="areaItem">{eventPost.area}</li>
             </ul>
         </li>))}
     </ul>
