@@ -53,6 +53,24 @@
     border: solid 6px #293C06;
 }
 
+.events__name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.events__description{
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.events__tag{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
 /* Events style PC */
 
 @media screen and (min-width: 636px) {
