@@ -14,7 +14,8 @@
 
 .events__tagWrapper {
     margin: 30px auto 0;
-    max-width: 510px;
+    max-width: 522px;
+    padding: 0 6px;
 }
 
 .events__seasonList,.events__areaList {
