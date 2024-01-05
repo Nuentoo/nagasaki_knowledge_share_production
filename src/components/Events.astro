@@ -48,25 +48,25 @@ const eventPosts = [{
 ---
 <!-- ここにHTML -->
 <section class="events">
-    <h2 class="events__subTitle subTitle">イベント</h2>
-    <div class="events__tagWrapper">
-      <ul class="events__seasonList">{uniqueSeasons.map((uniqueSeason)=><li class="tagItem">{uniqueSeason}</li>)}</ul>
-      <ul class="events__areaList">{uniqueAreas.map((uniqueArea)=><li class="tagItem">{uniqueArea}</li>)}</ul>
-    </div>
-    <ul class="events__postList">
-        {eventPosts.map((eventPost)=>(
-        <li class="events__postItem">
-          <!-- <img class="events__img" src="{image}" alt=""> -->
-          <div class="events__img"></div>
-          <h3 class="events__name">{eventPost.eventName}</h3>
-          <p class="events__description">{eventPost.description}</p>
-          <ul class="events__tag">
-              <li class="tagItem">{eventPost.season}</li>
-              <li class="tagItem">{eventPost.area}</li>
-          </ul>
-        </li>
-        ))}
-    </ul>
+  <h2 class="events__subTitle subTitle">イベント</h2>
+  <div class="events__tagWrapper">
+    <ul class="events__seasonList">{uniqueSeasons.map((uniqueSeason)=><li class="tagItem">{uniqueSeason}</li>)}</ul>
+    <ul class="events__areaList">{uniqueAreas.map((uniqueArea)=><li class="tagItem">{uniqueArea}</li>)}</ul>
+  </div>
+  <ul class="events__postList">
+    {eventPosts.map((eventPost)=>(
+    <li class="events__postItem">
+      <!-- <img class="events__img" src="{image}" alt=""> -->
+      <div class="events__img"></div>
+      <h3 class="events__name">{eventPost.eventName}</h3>
+      <p class="events__description">{eventPost.description}</p>
+      <ul class="events__tag">
+        <li class="tagItem">{eventPost.season}</li>
+        <li class="tagItem">{eventPost.area}</li>
+      </ul>
+    </li>
+    ))}
+  </ul>
 </section>
 
 <!-- styleは events.css -->
