@@ -12,7 +12,24 @@
 }
 
 .events__tagWrapper{
-    margin-top: 30px;
+    margin: 30px auto 0;
+    max-width: 510px;
+}
+
+.events__seasonList,.events__areaList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.events__areaList{
+    margin-top: 12px;
+}
+
+.tagItem{
+    border: solid 1px;
+    border-radius: 400px;
+    padding: 6px 18px;
 }
 
 .events__postWrapper{
