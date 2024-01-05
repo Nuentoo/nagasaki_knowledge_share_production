@@ -53,19 +53,26 @@
     border: solid 6px #293C06;
 }
 
+.events__text{
+    padding: 0 34px;
+}
+
 .events__name{
+    margin-top: 18px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.4;
 }
 
 .events__description{
+    margin-top: 18px;
     font-size: 16px;
     line-height: 1.4;
     text-align: left;
 }
 
 .events__tag{
+    margin-top: 18px;
     display: flex;
     gap: 6px;
     justify-content: center;

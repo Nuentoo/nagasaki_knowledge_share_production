@@ -58,12 +58,14 @@ const eventPosts = [{
     <li class="events__postItem">
       <!-- <img class="events__img" src="{image}" alt=""> -->
       <div class="events__img"></div>
-      <h3 class="events__name">{eventPost.eventName}</h3>
-      <p class="events__description">{eventPost.description}</p>
-      <ul class="events__tag">
-        <li class="tagItem">{eventPost.season}</li>
-        <li class="tagItem">{eventPost.area}</li>
-      </ul>
+      <div class="events__text">
+        <h3 class="events__name">{eventPost.eventName}</h3>
+        <p class="events__description">{eventPost.description}</p>
+        <ul class="events__tag">
+          <li class="tagItem">{eventPost.season}</li>
+          <li class="tagItem">{eventPost.area}</li>
+        </ul>
+      </div>
     </li>
     ))}
   </ul>
