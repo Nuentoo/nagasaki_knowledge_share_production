@@ -11,28 +11,28 @@
     font-size: 30px;
 }
 
-.events__tagWrapper{
+.events__tagWrapper {
     margin: 30px auto 0;
     max-width: 510px;
 }
 
-.events__seasonList,.events__areaList{
+.events__seasonList,.events__areaList {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-.events__areaList{
+.events__areaList {
     margin-top: 12px;
 }
 
-.tagItem{
+.tagItem {
     border: solid 1px;
     border-radius: 400px;
     padding: 6px 18px;
 }
 
-.events__postList{
+.events__postList {
     margin: 30px auto 0;
     max-width: 908px;
     display: grid;
@@ -40,7 +40,7 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.events__img{
+.events__img {
     background-color: rgb(225, 255, 255);
     border: solid 6px #627D31;
     border-radius: 5px;
@@ -49,29 +49,29 @@
     display: block;
 }
 
-.events__postItem:nth-of-type(even) > .events__img{
+.events__postItem:nth-of-type(even) > .events__img {
     border: solid 6px #293C06;
 }
 
-.events__text{
+.events__text {
     padding: 0 34px;
 }
 
-.events__name{
+.events__name {
     margin-top: 18px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.4;
 }
 
-.events__description{
+.events__description {
     margin-top: 18px;
     font-size: 16px;
     line-height: 1.4;
     text-align: left;
 }
 
-.events__tag{
+.events__tag {
     margin-top: 18px;
     display: flex;
     gap: 6px;
