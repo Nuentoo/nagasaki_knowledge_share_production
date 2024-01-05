@@ -34,6 +34,10 @@
 
 .events__postList{
     margin-top: 30px;
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 /* Events style PC */
