@@ -51,6 +51,14 @@
     display: block;
 }
 
+.events__postItem {
+    display: none;
+}
+
+.events__postItem.events__active {
+    display: block;
+}
+
 .events__postItem:nth-of-type(even) > .events__img {
     border: solid 6px #293C06;
 }
