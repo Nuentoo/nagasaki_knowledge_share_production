@@ -13,7 +13,7 @@ export const filterEvents = () => {
 
     tags.forEach(tag => {
         tag.addEventListener('click', () => {
-            const tarTag = tagItem.innerHTML;
+            const tarTag = tag.innerHTML;
             postTags.forEach(postTag => {
                 const tarPostTag = postTag.innerHTML;
                 if(tarPostTag === tarTag){
