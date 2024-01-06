@@ -28,10 +28,17 @@
     margin-top: 12px;
 }
 
-.events__tagItem {
-    border: solid 1px;
+.events__tag {
+    color: #A7A7A7;
+    border: #A7A7A7 dotted 1px;
     border-radius: 400px;
     padding: 6px 18px;
+    cursor: pointer;
+}
+
+.events__tag.events__active {
+    color: #080808;
+    border: #080808 solid 1px;
 }
 
 .events__postList {
@@ -81,11 +88,17 @@
     text-align: left;
 }
 
-.events__tag {
+.events__postTagList {
     margin-top: 18px;
     display: flex;
     gap: 6px;
     justify-content: center;
+}
+
+.events__postTag {
+    border: solid 1px;
+    border-radius: 400px;
+    padding: 6px 18px;
 }
 
 /* Events style PC */

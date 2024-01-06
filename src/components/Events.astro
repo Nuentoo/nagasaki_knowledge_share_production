@@ -52,12 +52,12 @@ const eventPosts = [{
   <div class="events__tagWrapper">
     <ul class="events__seasonList">
       {uniqueSeasons.map((uniqueSeason)=>
-        <li class="events__tagItem" data-eventsItem="tag">{uniqueSeason}</li>
+        <li class="events__tag" data-eventsItem="tag">{uniqueSeason}</li>
       )}
     </ul>
     <ul class="events__areaList">
       {uniqueAreas.map((uniqueArea)=>
-        <li class="events__tagItem" data-eventsItem="tag">{uniqueArea}</li>
+        <li class="events__tag" data-eventsItem="tag">{uniqueArea}</li>
       )}
     </ul>
   </div>
@@ -69,9 +69,9 @@ const eventPosts = [{
         <div class="events__text">
           <h3 class="events__name">{eventPost.eventName}</h3>
           <p class="events__description">{eventPost.description}</p>
-          <ul class="events__tag">
-            <li class="events__tagItem" data-eventsItem="postTag">{eventPost.season}</li>
-            <li class="events__tagItem" data-eventsItem="postTag">{eventPost.area}</li>
+          <ul class="events__postTagList">
+            <li class="events__postTag" data-eventsItem="postTag">{eventPost.season}</li>
+            <li class="events__postTag" data-eventsItem="postTag">{eventPost.area}</li>
           </ul>
         </div>
       </li>
