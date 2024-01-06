@@ -29,16 +29,20 @@
 }
 
 .events__tag {
-    color: #A7A7A7;
-    border: #A7A7A7 dotted 1px;
+    border: #080808 dotted 1px;
     border-radius: 400px;
     padding: 6px 18px;
     cursor: pointer;
+    opacity: 0.4;
 }
 
 .events__tag.events__active {
-    color: #080808;
     border: #080808 solid 1px;
+    opacity: 1;
+}
+
+.events__tag:hover {
+    opacity: 0.8;
 }
 
 .events__postList {
