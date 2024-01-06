@@ -52,18 +52,18 @@ const eventPosts = [{
   <div class="events__tagWrapper">
     <ul class="events__seasonList">
       {uniqueSeasons.map((uniqueSeason)=>
-        <li class="events__tag" data-eventsItem="tag">{uniqueSeason}</li>
+        <li class="events__tag events__active" data-eventsItem="tag">{uniqueSeason}</li>
       )}
     </ul>
     <ul class="events__areaList">
       {uniqueAreas.map((uniqueArea)=>
-        <li class="events__tag" data-eventsItem="tag">{uniqueArea}</li>
+        <li class="events__tag events__active" data-eventsItem="tag">{uniqueArea}</li>
       )}
     </ul>
   </div>
   <ul class="events__postList">
     {eventPosts.map((eventPost)=>(
-      <li class="events__postItem" data-eventsItem="post">
+      <li class="events__postItem events__active" data-eventsItem="post">
         <!-- <img class="events__img" src="{image}" alt=""> -->
         <div class="events__img"></div>
         <div class="events__text">
