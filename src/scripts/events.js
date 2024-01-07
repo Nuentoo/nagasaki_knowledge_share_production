@@ -20,35 +20,53 @@ export const filterEvents = () => {
      */
     const postTags = document.querySelectorAll('[data-eventsItem = postTag]');
 
-    tags.forEach(tag => {
-        tag.addEventListener('click', () => {
-            tags.forEach(allTag => {
-                allTag.classList.remove('events__active')
-            });
-            tag.classList.add('events__active');
+    // タグボタンを非アクティブ化
+    const disableTag = () => {
+        tags.forEach(tag => {
+            tag.classList.remove('events__active')
+        });
+    }
+    // 押したタグボタンをアクティブ化
+    const activeTag = (tag) => {
+        tag.classList.add('events__active');
+    }
+    // 記事を非アクティブ化
+    const disablePost = () =>{
+        posts.forEach(post => {
+            post.classList.remove('events__active');
+        });
+    }
+    // 押したタグボタンと紐づく記事をアクティブ化
+    const activePost = (tag) => {
+        postTags.forEach(postTag => {
             /**
              * クリックしたタグのinnerHTMLの文字列
              * @type {string}
              */
             const tarTag = tag.innerHTML;
-            posts.forEach(post => {
-                post.classList.remove('events__active');
-            });
-            postTags.forEach(postTag => {
-                /**
-                 * postTagのinnerHTMLの文字列
-                 * @type {string}
-                 */
-                const tarPostTag = postTag.innerHTML;
-                if(tarPostTag === tarTag){
-                /**
-                 * クリックしたタグと紐付くpost
-                 * @type {HTMLElement}
-                 */
-                const tarPost = postTag.closest('[data-eventsItem = post]')
-                tarPost.classList.add('events__active');
-                }
-            });
+            /**
+             * postTagのinnerHTMLの文字列
+             * @type {string}
+             */
+            const postTagHTML = postTag.innerHTML;
+            if(postTagHTML === tarTag){
+            /**
+             * クリックしたタグと紐付くpost
+             * @type {HTMLElement}
+             */
+            const tarPost = postTag.closest('[data-eventsItem = post]')
+            tarPost.classList.add('events__active');
+            }
+        });
+    }
+
+    // タグボタンを押したとき発火
+    tags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            disableTag();
+            activeTag(tag);
+            disablePost();
+            activePost(tag);
         });
     });
 }
