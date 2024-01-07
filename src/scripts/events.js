@@ -4,15 +4,9 @@
 /* events export */
 
 export const filterEvents = () => {
-    const tags = document.querySelectorAll(
-        '[data-eventsItem = tag]'
-    );
-    const posts = document.querySelectorAll(
-        '[data-eventsItem = post]'
-    );
-    const postTags = document.querySelectorAll(
-        '[data-eventsItem = postTag]'
-    );
+    const tags = document.querySelectorAll('[data-eventsItem = tag]');
+    const posts = document.querySelectorAll('[data-eventsItem = post]');
+    const postTags = document.querySelectorAll('[data-eventsItem = postTag]');
 
     tags.forEach(tag => {
         tag.addEventListener('click', () => {
