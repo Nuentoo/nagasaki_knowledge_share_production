@@ -1,6 +1,6 @@
 ---
 // microCMSの呼び出し
-import { getCats } from "../libs/microcms";
+import { getCats } from "../libs/microcms.ts";
 const response = await getCats({ fields: ['image', 'caption'] });
 ---
 
@@ -14,7 +14,7 @@ const response = await getCats({ fields: ['image', 'caption'] });
         response.contents.map((cat: any) => (
           <li class="b-carousel__item">
             <figure >
-              <img src={cat.image.url} alt="" class="b-carousel__img">
+              <img src={cat.image.url} alt="" class="b-carousel__img" />
               <figcaption  class="b-carousel__caption">{cat.caption}</figcaption>
             </figure>
           </li>

@@ -8,6 +8,7 @@ export type Cats = {
     url: string;
     image: MicroCMSImage;
   };
+  caption: string;
 };
 
 const client = createClient({
