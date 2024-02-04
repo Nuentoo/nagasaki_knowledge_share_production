@@ -50,12 +50,12 @@ export const filterEvents = () => {
              */
             const postTagHTML = postTag.innerHTML;
             if(postTagHTML === tarTag){
-            /**
-             * クリックしたタグと紐付くpost
-             * @type {HTMLElement}
-             */
-            const tarPost = postTag.closest('[data-eventsItem = post]')
-            tarPost.classList.add('events__active');
+                /**
+                 * クリックしたタグと紐付くpost
+                 * @type {HTMLElement}
+                 */
+                const tarPost = postTag.closest('[data-eventsItem = post]')
+                tarPost.classList.add('events__active');
             }
         });
     }
