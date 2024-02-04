@@ -27,8 +27,8 @@ export const filterEvents = () => {
         });
     }
     // 押したタグボタンをアクティブ化
-    const activeTag = (tag) => {
-        tag.classList.add('events__active');
+    const activeTag = (target) => {
+        target.classList.add('events__active');
     }
     // 記事を非アクティブ化
     const disablePost = () =>{
@@ -37,13 +37,13 @@ export const filterEvents = () => {
         });
     }
     // 押したタグボタンと紐づく記事をアクティブ化
-    const activePost = (tag) => {
+    const activePost = (target) => {
         postTags.forEach(postTag => {
             /**
              * クリックしたタグのinnerHTMLの文字列
              * @type {string}
              */
-            const tarTag = tag.innerHTML;
+            const tarTag = target.innerHTML;
             /**
              * postTagのinnerHTMLの文字列
              * @type {string}
@@ -62,11 +62,12 @@ export const filterEvents = () => {
 
     // タグボタンを押したとき発火
     tags.forEach(tag => {
-        tag.addEventListener('click', () => {
+        tag.addEventListener('click', (e) => {
+            const target = e.target
             disableTag();
-            activeTag(tag);
+            activeTag(target);
             disablePost();
-            activePost(tag);
+            activePost(target);
         });
     });
 }
