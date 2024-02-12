@@ -1,11 +1,35 @@
 ---
+const navSections = [{
+    name: "長崎グルメ",
+    description: "食べ歩きスポット巡り",
+    url: "#"
+  },{
+    name: "夜景スポット",
+    description: "夜景見るならここきて！",
+    url: "#"
+  },{
+    name: "イベント",
+    description: "季節や地域ごとのイベント",
+    url: "#"
+  },{
+    name: "長崎妖怪",
+    description: "テキストテキストテキスト",
+    url: "#"
+  },{
+    name: "尾曲ネコ",
+    description: "テキストテキストテキスト",
+    url: "#"
+  }]
 ---
 <!-- ここにHTML -->
-<div class="navLinks">
-  <a href="#">MENU 1</a>
+<ul class = "navLinks">
+  { navSections.map((navSection) =>
+    <li class=""><a href={navSection.url}>{navSection.name}</a></li>
+  )}
+  <!-- <a href="#">MENU 1</a>
   <a href="#">MENU 2</a>
   <a href="#">MENU 3</a>
-  <a href="#">MENU 4</a>
-</div>
+  <a href="#">MENU 4</a> -->
+</ul>
 
 <!-- styleは global.css -->
