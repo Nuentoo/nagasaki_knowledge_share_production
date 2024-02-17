@@ -56,18 +56,18 @@
   transition: all 0.2s;
 }
 
-.hamburger.expanded .hamburger__icon{
+.hamburger.opened .hamburger__icon{
   background-color: transparent;
 }
 
-.hamburger.expanded .hamburger__icon::before{
+.hamburger.opened .hamburger__icon::before{
   top: 0;
   left: 0;
   transform: rotate(-135deg);
   transition: all 0.2s ;
 }
 
-.hamburger.expanded .hamburger__icon::after{
+.hamburger.opened .hamburger__icon::after{
   width: 35px;
   height: 2px;
   border-radius: 500px;
@@ -102,6 +102,6 @@
     }
   }
 
-  .expanded {
+  .opened {
     display: unset;
   }

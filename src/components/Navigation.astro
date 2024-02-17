@@ -22,7 +22,7 @@ const navSections = [{
   }]
 ---
 <!-- ここにHTML -->
-<ul class = "navLinks">
+<ul class = "navLinks" data-headerItem="navList">
   { navSections.map((navSection) =>
     <li class=""><a href={navSection.url}>{navSection.name}</a></li>
   )}
