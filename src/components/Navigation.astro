@@ -22,14 +22,12 @@ const navSections = [{
   }]
 ---
 <!-- ここにHTML -->
-<ul class = "navLinks" data-headerItem="navList">
-  { navSections.map((navSection) =>
-    <li class=""><a href={navSection.url}>{navSection.name}</a></li>
-  )}
-  <!-- <a href="#">MENU 1</a>
-  <a href="#">MENU 2</a>
-  <a href="#">MENU 3</a>
-  <a href="#">MENU 4</a> -->
-</ul>
-
+<nav class="nav" data-headerItem="nav">
+  <h2 class="nav__heading">Nagasaki</h2>
+  <ul class = "nav__list">
+    { navSections.map((navSection) =>
+      <li class="nav__item"><a class ="nav__link" href={navSection.url}>{navSection.name}<span class="nav__description">{navSection.description}</span></a></li>
+    )}
+  </ul>
+</nav>
 <!-- styleは global.css -->
