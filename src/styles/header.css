@@ -29,6 +29,7 @@
 
 .hamburger__icon{
   top: 50%;
+  pointer-events: none;
 }
 
 .hamburger__icon::before{
