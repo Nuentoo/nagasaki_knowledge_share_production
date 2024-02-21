@@ -1,10 +1,109 @@
 ---
+import ariran from '../assets/events/ariran.jpg'
+import chankoko from '../assets/events/chankoko.jpg'
+import hasami from '../assets/events/hasami.jpg'
+import hetomato from '../assets/events/hetomato.jpg'
+import jangara from '../assets/events/jangara.jpg'
+import kunchi from '../assets/events/kunchi.jpg'
+import rantan from '../assets/events/rantan.jpg'
+import shoronagashi from '../assets/events/shoronagashi.jpg'
+import yabusame from '../assets/events/yabusame.jpg'
+
+const eventPosts = [{
+    eventName: "波佐見陶器祭り",
+    description: "陶器市のイベント。鋳込み・絵付（有料）体験などのコーナーも",
+    image: hasami,
+    season: "春",
+    area: "波佐見町",
+  },{
+    eventName: "平戸じゃんがら",
+    description: "平戸に古くから伝わる先祖供養と、豊年祈願の踊り「じゃんがら」を披露するイベント",
+    image: jangara,
+    season: "夏",
+    area: "平戸市",
+  },{
+    eventName: "チャンココ",
+    description: "花笠、腰みの、太鼓を持った姿で念仏踊り「チャンココ」を踊り、先祖の御霊を鎮めるイベント",
+    image: chankoko,
+    season: "夏",
+    area: "五島市",
+  },{
+    eventName: "対馬アリラン祭り",
+    description: "江戸時代の「朝鮮通信使」を再現した衣装の行列などの催しが行われるイベント",
+    image: ariran,
+    season: "夏",
+    area: "対馬市",
+  },{
+    eventName: "精霊流し",
+    description: "故人の霊を弔うために手作りした船を曳きながら街中を練り歩くイベント",
+    image: shoronagashi,
+    season: "夏",
+    area: "長崎市",
+  },{
+    eventName: "長崎くんち",
+    description: "諏訪神社の祭礼イベント。「龍踊」「鯨の潮吹き」などの奉納踊りが行われる",
+    image: kunchi,
+    season: "秋",
+    area: "長崎市",
+  },{
+    eventName: "流鏑馬",
+    description: "3箇所の的に向かって、烏帽子・狩衣装束姿の射手が疾走する馬の上から弓で鏑矢を放ち射るイベント",
+    image: yabusame,
+    season: "秋",
+    area: "松浦市",
+  },{
+    eventName: "へトマト",
+    description: "「豊作」「大漁」「子孫繁栄」を祈願したイベント。大草履を担いで練り歩くなどの催しが行われる",
+    image: hetomato,
+    season: "冬",
+    area: "五島市",
+  },{
+    eventName: "長崎ランタンフェスティバル",
+    description: "中国の旧正月を祝う春節祭をもとにしたイベント。長崎新地中華街を中心にランタンが飾られる",
+    image: rantan,
+    season: "冬",
+    area: "長崎市",
+  }];
+
+  const uniqueSeasons = [...new Set(eventPosts.map((eventPost)=>eventPost.season))]
+  const uniqueAreas = [...new Set(eventPosts.map((eventPost)=>eventPost.area))]
 ---
 <!-- ここにHTML -->
 <section class="events">
-    <h2 class="subTitle">イベント</h2>
+  <h2 class="events__subTitle subTitle">イベント</h2>
+  <div class="events__tagWrapper">
+    <ul class="events__seasonList">
+      {uniqueSeasons.map((uniqueSeason)=>
+        <li class="events__tag events__active" data-eventsItem="tag">{uniqueSeason}</li>
+      )}
+    </ul>
+    <ul class="events__areaList">
+      {uniqueAreas.map((uniqueArea)=>
+        <li class="events__tag events__active" data-eventsItem="tag">{uniqueArea}</li>
+      )}
+    </ul>
+  </div>
+  <ul class="events__postList">
+    {eventPosts.map((eventPost)=>(
+      <li class="events__postItem events__active" data-eventsItem="post">
+        <img class="events__img" src={eventPost.image.src} alt="">
+        <div class="events__text">
+          <h3 class="events__name">{eventPost.eventName}</h3>
+          <p class="events__description">{eventPost.description}</p>
+          <ul class="events__postTagList">
+            <li class="events__postTag" data-eventsItem="postTag">{eventPost.season}</li>
+            <li class="events__postTag" data-eventsItem="postTag">{eventPost.area}</li>
+          </ul>
+        </div>
+      </li>
+    ))}
+  </ul>
 </section>
 
 <!-- styleは events.css -->
 
-<!-- DOM操作は hoge.js -->
+<!-- DOM操作は events.js -->
+<script>
+  import { filterEvents } from "../scripts/events.js";
+  filterEvents();
+</script>
