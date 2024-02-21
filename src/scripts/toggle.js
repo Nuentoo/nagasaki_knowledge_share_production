@@ -11,5 +11,10 @@ export const hamburgerToggle = () => {
         $(target).toggleClass('opened');
         $(navList).toggleClass('opened');
         e.stopPropagation();
+        if ($("body").css("overflow") === "hidden") {
+            $("body").css({height:"", overflow:""});
+        } else {
+            $("body").css({height:"100%", overflow:"hidden"});
+        }
     });
 }
