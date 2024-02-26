@@ -22,19 +22,15 @@ export const filterEvents = () => {
 
     // タグボタンを非アクティブ化
     const disableTag = () => {
-        tags.forEach(tag => {
-            tag.classList.remove('events__active')
-        });
+        $(tags).removeClass('events__active');
     }
     // 押したタグボタンをアクティブ化
     const activeTag = (target) => {
-        target.classList.add('events__active');
+        $(target).addClass('events__active');
     }
     // 記事を非アクティブ化
     const disablePost = () =>{
-        posts.forEach(post => {
-            post.classList.remove('events__active');
-        });
+        $(posts).removeClass('events__active');
     }
     // 押したタグボタンと紐づく記事をアクティブ化
     const activePost = (target) => {
@@ -55,19 +51,17 @@ export const filterEvents = () => {
                  * @type {HTMLElement}
                  */
                 const tarPost = postTag.closest('[data-eventsItem = post]')
-                tarPost.classList.add('events__active');
+                $(tarPost).addClass('events__active');
             }
         });
     }
 
     // タグボタンを押したとき発火
-    tags.forEach(tag => {
-        tag.addEventListener('click', (e) => {
-            const target = e.target
-            disableTag();
-            activeTag(target);
-            disablePost();
-            activePost(target);
-        });
+    $(tags).on('click', (e) => {
+        const target = e.target
+        disableTag();
+        activeTag(target);
+        disablePost();
+        activePost(target);
     });
 }
