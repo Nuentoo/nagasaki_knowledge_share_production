@@ -2,23 +2,23 @@
 const navSections = [{
     name: "長崎グルメ",
     description: "食べ歩きスポット巡り",
-    url: "#"
+    url: "#introduction"
   },{
     name: "夜景スポット",
     description: "夜景見るならここきて！",
-    url: "#"
+    url: "#tripSpots"
   },{
     name: "イベント",
     description: "季節や地域ごとのイベント",
-    url: "#"
+    url: "#events"
   },{
     name: "長崎妖怪",
-    description: "テキストテキストテキスト",
-    url: "#"
+    description: "長崎のおすすめ あれこれ",
+    url: "#youkais"
   },{
     name: "尾曲ネコ",
-    description: "テキストテキストテキスト",
-    url: "#"
+    description: "長崎とねこ",
+    url: "#bentTailsCats"
   }]
 ---
 <!-- ここにHTML -->
@@ -26,7 +26,7 @@ const navSections = [{
   <h2 class="nav__heading"><a href="/" class="navHeading__link">Nagasaki</a></h2>
   <ul class = "nav__list">
     { navSections.map((navSection) =>
-      <li class="nav__item"><a class ="nav__link" href={navSection.url}>{navSection.name}<span class="nav__description">{navSection.description}</span></a></li>
+      <li class="nav__item"><a class ="nav__link" data-headerItem="navItems" href={navSection.url}>{navSection.name}<span class="nav__description">{navSection.description}</span></a></li>
     )}
   </ul>
 </nav>
