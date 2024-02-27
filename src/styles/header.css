@@ -103,6 +103,7 @@
   background: transparent;
   color: #FAF9F3;
   bottom: -200vh;
+  z-index: 600;
 }
 
 .nav::before {
@@ -110,7 +111,7 @@
 }
 
 .nav__heading {
-  z-index: 600;
+  z-index: 650;
 }
 
 .navHeading__link {
@@ -119,7 +120,6 @@
 
 .nav__list {
   margin-top: 30px;
-  z-index: 600;
   width: min(100%, 360px);
 }
 
@@ -171,7 +171,6 @@
   transition: all .2s;
   width: 100%;
   position: fixed;
-  z-index: 100;
 }
 
 /* Navigation hover */
