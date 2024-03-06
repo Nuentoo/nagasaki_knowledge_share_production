@@ -14,21 +14,32 @@
   color: #080808;
 }
 
-.b-carousel {
-  margin-bottom: 40px;
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+    to {
+    transform: translateX(-100%);
+  }
 }
 
-.b-carousel__list {
-  width: 100%;
+.b-carousel {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 16px;
+  margin-bottom: 40px;
   overflow: hidden;
 }
 
+.b-carousel__list {
+  animation: infinity-scroll-left 25s infinite linear 0.5s both;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-left: 16px
+}
+
 .b-carousel__item {
-  width: 320px;
-  min-width: 320px;
+  width: 220px;
+  min-width: 220px;
 }
 
 .b-carousel__img {
@@ -41,7 +52,7 @@
 
 .b-carousel__caption {
   padding: 12px;
-  height: 124px;
+  height: 152px;
   font-size: 16px;
   line-height: 1.6;
   color: #fff;
@@ -63,4 +74,11 @@
 /* BentTailCats style PC */
 
 @media screen and (min-width: 636px) {
+  .b-carousel__item {
+    width: 320px;
+    min-width: 320px;
+  }
+  .b-carousel__caption {
+    height: 124px;
+  }
 }

@@ -8,7 +8,7 @@ const response = await getCats({ fields: ['image', 'caption'] });
   <h2 class="b-subTitle">尾曲ネコ</h2>
 
   <div class="b-carousel">
-    <ul class="b-carousel__list">
+    <ul class="b-carousel__list" data-js="carousel">
 
       {
         response.contents.map((cat: any) => (
@@ -38,8 +38,3 @@ const response = await getCats({ fields: ['image', 'caption'] });
   </p>
   <p class="b-carousel__text">地域の猫カフェや猫の神社など、尾曲がり猫と触れ合える場所もありますので、ねこ好きさんはぜひ訪れてみてください。</p>
 </section>
-
-<script>
-  import { caloselBentTailCats } from "../scripts/carousel.js";
-  caloselBentTailCats();
-</script>
