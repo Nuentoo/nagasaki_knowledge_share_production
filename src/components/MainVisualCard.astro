@@ -1,0 +1,39 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image, getImage } from 'astro:assets';
+import "../styles/mainVisual.css";
+
+interface Props {
+    titleFirst: string;
+    titleSecond: string;
+}
+
+type ImageMetaObject = {
+    [key: string]: () => any;
+};
+
+const { titleFirst, titleSecond }: Props = Astro.props;
+const imagesSp: ImageMetaObject = import.meta.glob<{ default: ImageMetadata }>('/src/assets/mainVisual/sp/*.{jpeg,jpg,png,gif}');
+const imagesPc: ImageMetaObject = import.meta.glob<{ default: ImageMetadata }>('/src/assets/mainVisual/pc/*.{jpeg,jpg,png,gif}');
+// if (!(Object.values(imagesSp) && Object.values(imagesPc))) throw new Error('does not exist in glob: "src/assets/mainVisual/*');
+const imagesSpPath = Object.keys(imagesSp);
+const imagesPcPath = Object.keys(imagesPc);
+// const optimizedBackground = await getImage({src: imagesSp[0](), format: 'webp'})
+---
+<section class="mainVisual">
+    <h1 class="mainVisual_title"><span class="mainVisual_title__vertical">{titleFirst}</span>&hairsp;{titleSecond}</h1>
+    <div class="slider_container">
+        <ul class="mainVisual_container" data-js="carousel">  <!-- data-sp-length=`${imagesSpPath.length}` data-pc-length=`${imagesPcPath.length}` -->
+            {
+                imagesSpPath.map((imgPath) => (
+                    <li class="mainVisual_list sp"><Image class="mainVisual_img sp" src={imagesSp[imgPath]()} alt={imgPath.match(/\/([^/]+)_/)?.[1] || ''} loading="eager"/></li>
+                ))
+            }
+            {
+                imagesPcPath.map((imgPath) => (
+                    <li class="mainVisual_list pc"><Image class="mainVisual_img pc" src={imagesPc[imgPath]()} alt={imgPath.match(/\/([^/]+)_/)?.[1] || ''} loading="eager"/></li>
+                ))
+            }
+        </ul>
+    </div>
+</section>

@@ -1,15 +1,129 @@
 /* Events style SP */
 
 .events {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z5CtDAAE/wGPm2umRwAAAABJRU5ErkJggg==);
-    height: 1000px;
+    color: #080808;
     width: 100%;
-    .subTitle {
-        text-align: center;
-        font-size: 30px;
-    }
+    text-align: center;
+    padding: 72px 30px;
 }
 
+.events__subTitle {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.events__tagWrapper {
+    margin: 30px auto 0;
+    max-width: 522px;
+    padding: 0 6px;
+}
+
+.events__seasonList,.events__areaList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.events__areaList {
+    margin-top: 12px;
+}
+
+.events__tag {
+    border: #080808 dotted 1px;
+    border-radius: 400px;
+    padding: 6px 18px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+}
+
+.events__tag.events__active {
+    border: #080808 solid 1px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.events__tag:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.events__postList {
+    margin: 30px auto 0;
+    max-width: 908px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.events__img {
+    background-color: rgb(225, 255, 255);
+    border: solid 6px #627D31;
+    border-radius: 5px;
+    width: 100%;
+    height: 246px;
+    display: block;
+}
+
+.events__postItem {
+    display: none;
+    max-width: 318px;
+    margin: 0 auto;
+}
+
+.events__postItem.events__active {
+    display: block;
+    animation: fade-in 0.3s ease 0.2s backwards;
+}
+
+.events__postItem:nth-of-type(even) > .events__img {
+    border: solid 6px #293C06;
+}
+
+.events__text {
+    padding: 0 34px;
+}
+
+.events__name {
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+.events__description {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.events__postTagList {
+    margin-top: 18px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.events__postTag {
+    border: solid 1px;
+    border-radius: 400px;
+    padding: 6px 18px;
+    border: #080808 solid 1px;
+}
+
+@keyframes fade-in {
+    0% {
+    opacity: 0;
+    transform: translateY(2px);
+    }
+
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
 
 /* Events style PC */
 
