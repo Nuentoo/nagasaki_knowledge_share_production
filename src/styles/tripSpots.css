@@ -1,18 +1,334 @@
 /* TripSpots style SP */
 
 .tripSpots {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP0/s+gDAAEVgFvKoQ2HwAAAABJRU5ErkJggg==);
-    height: 1000px;
     width: 100%;
-    .subTitle {
-        font-size: 30px;
-        text-align: center;
-    }
+    margin: 0 auto;
+    max-width: 960px;
 }
 
+.tripSpots__titleWrap {
+    position: relative;
+    text-align: center;
+}
 
-/* TripSpots style PC */
+.tripSpots__title {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    text-align: center;
+    z-index: 100;
+    padding-top: 30px;
+}
 
-@media screen and (min-width: 636px) {
+.tripSpots__title span {
+    font-size: 38px;
+}
 
+.tripSpots__title::after{
+    position: absolute;
+    content: "おすすめ";
+    display: block;
+    background-color: #627D31;
+    color: #ffffff;
+    font-size: 10px;
+    width: 54px;
+    border-radius: 50%;
+    right: -4px;
+    bottom: -26px;
+    z-index: 90;
+    line-height: 54px;
+    transform: rotate( 26deg );
+}
+
+.tripSpots__subtitleWrap {
+    background: #fff;
+    margin-top: 60px;
+    padding: 0 30px;
+}
+
+.tripSpots__subtitle {
+    font-weight: bold;
+    font-size: 70px;
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 3px 3px 0 #c0d62e8a;
+    -webkit-text-stroke: 1px #080808;
+    font-size: 30px;
+}
+
+.tripSpots__cityName {
+    font-size: 12px;
+}
+
+.tripSpots__backgroundImg {
+    width: 100%;
+    height: 228px;
+    margin-top: 18px;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.tripSpots__contentWrap {
+    margin-top: 20px;
+    padding: 0 30px;
+}
+
+.tripSpots__contentTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tripSpots__contentText {
+    font-size: 10px;
+    margin-top: 14px;
+    line-height: 1.6;
+    font-weight: bold;
+
+    .tripSpots {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.tripSpots__titleWrap {
+    position: relative;
+    text-align: center;
+}
+
+.tripSpots__title {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    text-align: center;
+    z-index: 100;
+    padding-top: 30px;
+}
+
+.tripSpots__title span {
+    font-size: 38px;
+}
+
+.tripSpots__title::after{
+    position: absolute;
+    content: "おすすめ";
+    display: block;
+    background-color: #627D31;
+    color: #ffffff;
+    font-size: 10px;
+    width: 54px;
+    border-radius: 50%;
+    right: -4px;
+    bottom: -26px;
+    z-index: 90;
+    line-height: 54px;
+    transform: rotate( 26deg );
+}
+
+.tripSpots__subtitleWrap {
+    background: #fff;
+    margin-top: 60px;
+    padding: 0 30px;
+}
+
+.tripSpots__subtitle {
+    font-weight: bold;
+    font-size: 70px;
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 3px 3px 0 #c0d62e8a;
+    -webkit-text-stroke: 1px #080808;
+    font-size: 30px;
+}
+
+.tripSpots__cityName {
+    font-size: 12px;
+}
+
+.tripSpots__backgroundImg {
+    width: 100%;
+    height: 228px;
+    margin-top: 18px;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.tripSpots__contentWrap {
+    margin-top: 20px;
+    padding: 0 30px;
+}
+
+.tripSpots__contentTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tripSpots__contentText {
+    font-size: 10px;
+    margin-top: 14px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.tripSpots__other {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.tripSpots__otherImageWrap {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.tripSpots__otherImage {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center bottom;
+    transition: 0.25s;
+    border-radius: 8px;
+}
+
+.tripSpots__otherImage:hover {
+    transform: scale(110%);
+}
+
+.tripSpots__accessButton {
+    padding: 12px 60px;
+    border: 2px solid #080808;
+    border-radius: 100px;
+    margin-top: 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    background-color: #dde898;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tripSpots__accessContents {
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.--active {
+    display: none;
+}
+
+.tripSpots__accessInformationInner {
+    margin-top: 18px;
+}
+
+.tripSpots__accessDescriptionTitle {
+    font-size: 8px;
+    padding: 4px 0;
+    background-color: #dde898;
+    color: #080808;
+    border-radius: 100px;
+    width: 60px;
+    text-align: center;
+}
+
+.tripSpots__accessDescription {
+    font-size: 10px;
+    margin-top: 8px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.tripSpots__accessDescriptionText {
+    margin-top: 10px;
+}
+
+.tripSpots__accessMap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+}
+
+.tripSpots__other {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.tripSpots__otherImageWrap {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.tripSpots__otherImage {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center bottom;
+    transition: 0.25s;
+    border-radius: 8px;
+}
+
+.tripSpots__otherImage:hover {
+    transform: scale(110%);
+}
+
+.tripSpots__accessButton {
+    padding: 12px 60px;
+    border: 2px solid #080808;
+    border-radius: 100px;
+    margin-top: 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    background-color: #dde898;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tripSpots__accessContents {
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.--active {
+    display: none;
+}
+
+.tripSpots__accessInformationInner {
+    margin-top: 18px;
+}
+
+.tripSpots__accessDescriptionTitle {
+    font-size: 8px;
+    padding: 4px 0;
+    background-color: #dde898;
+    color: #080808;
+    border-radius: 100px;
+    width: 60px;
+    text-align: center;
+}
+
+.tripSpots__accessDescription {
+    font-size: 10px;
+    margin-top: 8px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.tripSpots__accessDescriptionText {
+    margin-top: 10px;
+}
+
+.tripSpots__accessMap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
 }

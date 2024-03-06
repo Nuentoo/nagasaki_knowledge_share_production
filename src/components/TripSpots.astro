@@ -1,9 +1,163 @@
 ---
+
+const tripPosts = [{
+    tripTitle:"鍋冠山展望台",
+    cityName:"Nagasaki City",
+    contentTitle:"知らない人も多い隠れ夜景",
+    contentText:"個人的に激推し！実はここ、夜景観光スポットといえばでよく知られている「稲佐山展望台」から10km、同じ市内に位置しています。標高が低い分、ここならではの迫力が感じられます。推しポイントは、飲食店や売店などがなく、人が混雑しているといった事がないためゆったりとした時間を過ごすことができます！綺麗な稲佐山展望台もここから見えるよ〜！",
+    accessAddress:"〒850-0924 長崎県長崎市出雲２丁目１４４- 1",
+    accessContact:"095-829-1184(長崎市地域整備2課)",
+    accessHoliday:"無休",
+    accessPrice:"無料",
+    accessParking:"無料駐車場3ヶ所あり（8:00～22:00）/ 普通車10台(車いす使用者用1台/軽自動車4台) / 普通車5台 / 普通車10台(車いす使用者用1台)",
+    accessDescriptionText_1:"「長崎新地ターミナル」バス停から長崎バス・うみかぜ「二本松団地」行で約20分「二本松団地」下車、徒歩約15分",
+    accessDescriptionText_2:"路面電車「石橋」駅から徒歩約2分、グラバースカイロードを利用し、グラバー園第2ゲートから徒歩約10分",
+    accessDescriptionText_3:"JR長崎駅から車で約15分",
+    accessMap:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d802.2106440974018!2d129.8687559012494!3d32.729580079974276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3515530936898803%3A0xba335f95534f0617!2z6Y2L5Yag5bGx5bGV5pyb5Y-w!5e0!3m2!1sja!2sjp!4v1708869173703!5m2!1sja!2sjp"
+},{
+    tripTitle:"稲佐山展望台",
+    cityName:"Nagasaki City",
+    contentTitle:"世界三大夜景への空中散歩",
+    contentText:"360度一望しながらロープウェイで絶景の山頂へ。レストランや、素敵な照明に包まれた展望台の空間でロマンティックな時間を過ごせます。晴れた日の昼間には、長崎市街地はもちろん、雲仙、天草、五島列島まで眺められる、ドライブの締めくくりにもぴったりなスポット！",
+    accessAddress:"〒852-8011 長崎県長崎市大浜町364 稲佐山公園",
+    accessContact:"095-861-7742 （稲佐山公園管理事務所）",
+    accessHoliday:"無休",
+    accessPrice:"無料",
+    accessParking:"山頂有料駐車場40台 (最初の20分無料 / 以降30分100円)",
+    accessDescriptionText_1:"ロープウェイ利用の場合　ロープウェイ淵神社駅よりロープウェイ搭乗（1,090m、約5分）",
+    accessDescriptionText_2:"JR長崎駅から車で約10分、長崎バス3,4番系統（下大橋・小江原・相川行き）、ロープウェイ前停留所で下車、徒歩約3分、スロープカー利用の場合は稲佐山中腹駅より搭乗（約800m、約8分）",
+    accessDescriptionText_3:"お車でお越しの場合　稲佐山中腹駐車場から稲佐山展望台方面へ約2分（800m）",
+    accessMap:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2373.8184176140226!2d129.84745973143512!3d32.75217751756648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3515533865a8901b%3A0x46fc857a983dd19f!2z56iy5L2Q5bGx5bGx6aCC5bGV5pyb5Y-w!5e0!3m2!1sja!2sjp!4v1708935715827!5m2!1sja!2sjp"
+},{
+    tripTitle:"弓張岳展望台",
+    cityName:"Sasebo City",
+    contentTitle:"九十九島の大パノラマを一望",
+    contentText:"佐世保港周辺の海軍基地、造船所の灯り、市街の街灯りがオレンジ色に輝く色彩が珍しく美しい！展望台の広場には芝生もありお子様のちょっとした遊び場にもなりそうですね！なんといっても自然に囲まれており、季節を楽しむことができる屋根付き展望台なので安心できる憩いの場です。",
+    accessAddress:"〒857-0065 長崎県佐世保市小野町",
+    accessContact:"	0956-22-6630（佐世保観光情報センター（JR佐世保駅構内))",
+    accessHoliday:"無休",
+    accessPrice:"無料",
+    accessParking:"94台（うち、大型車8台)",
+    accessDescriptionText_1:"<バス>佐世保駅前から「弓張岳展望台」行で約25分、終点下車後すぐ",
+    accessMap:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.326784187009!2d129.69788057630944!3d33.17929666331809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356a94ef6ed31aa3%3A0x4f2a7774c8aecd0b!2z5byT5by15bKzIOWxleacm-WPsA!5e0!3m2!1sja!2sjp!4v1708960951499!5m2!1sja!2sjp"
+}]
 ---
 <!-- ここにHTML -->
 <section class="tripSpots">
-    <h2 class="subTitle">スポット</h2>
+    <div>
+        <div class="tripSpots__titleWrap">
+            <h2 class="tripSpots__title">
+                <span>長崎</span>の<span>夜景</span>見るなら<br><span>ココ</span>に来て！
+            </h2>
+        </div>
+        {tripPosts.map((tripPost)=> (
+        <div>
+            <div class="tripSpots__subtitleWrap">
+                <h3 class="tripSpots__subtitle">
+                    {tripPost.tripTitle}
+                </h3>
+                <span class="tripSpots__cityName">
+                    {tripPost.cityName}
+                </span>
+            </div>
+            <figure class="tripSpots__backgroundImg" style="background-image:url('../src/assets/tripSpots/nabekanmuri.jpeg');"></figure>
+            <div class="tripSpots__contentWrap">
+                <h4 class="tripSpots__contentTitle">
+                    {tripPost.contentTitle}
+                </h4>
+                <p class="tripSpots__contentText">
+                    {tripPost.contentText}
+                <h5 class="tripSpots__other">
+                    その他の画像
+                </h5>
+                <div class="tripSpots__otherImageWrap">
+                    <figure class="tripSpots__otherImage" style="background-image:url('../src/assets/tripSpots/nabekanmuri_2.jpeg');"></figure>
+                    <figure class="tripSpots__otherImage" style="background-image:url('../src/assets/tripSpots/nabekanmuri_3.jpeg');"></figure>
+                    <figure class="tripSpots__otherImage" style="background-image:url('../src/assets/tripSpots/nabekanmuri_4.jpeg');"></figure>
+                </div>
+                <button onclick="accessButton(0)" class="tripSpots__accessButton">
+                    アクセスはこちら
+                </button>
+                <div class="tripSpots__accessContents --active">
+                    <dl class="tripSpots__accessInformation">
+                        <div class="tripSpots__accessInformationInner">
+                            <dt class="tripSpots__accessDescriptionTitle">
+                                住所
+                            </dt>
+                            <dd class="tripSpots__accessDescription">
+                                {tripPost.accessAddress}
+                            </dd>
+                        </div>
+                        <div class="tripSpots__accessInformationInner">
+                            <dt class="tripSpots__accessDescriptionTitle">
+                                電話番号
+                            </dt>
+                            <dd class="tripSpots__accessDescription">
+                                {tripPost.accessContact}
+                            </dd>
+                        </div>
+                        <div class="tripSpots__accessInformationInner">
+                            <dt class="tripSpots__accessDescriptionTitle">
+                                休日
+                            </dt>
+                            <dd class="tripSpots__accessDescription">
+                                {tripPost.accessHoliday}
+                            </dd>
+                        </div>
+                        <div class="tripSpots__accessInformationInner">
+                            <dt class="tripSpots__accessDescriptionTitle">
+                                料金
+                            </dt>
+                            <dd class="tripSpots__accessDescription">
+                                {tripPost.accessPrice}
+                            </dd>
+                        </div>
+                        <div class="tripSpots__accessInformationInner">
+                            <dt class="tripSpots__accessDescriptionTitle">
+                                駐車場
+                            </dt>
+                            <dd class="tripSpots__accessDescription">
+                                {tripPost.accessParking}
+                            </dd>
+                        </div>
+                        <div class="tripSpots__accessInformationInner">
+                        <dt class="tripSpots__accessDescriptionTitle">
+                            アクセス
+                        </dt>
+                            <dd class="tripSpots__accessDescription">
+                                <p class="tripSpots__accessDescriptionText">
+                                    {tripPost.accessDescriptionText_1}
+                                </p>
+                                <p class="tripSpots__accessDescriptionText">
+                                    {tripPost.accessDescriptionText_2}
+                                </p>
+                                <p class="tripSpots__accessDescriptionText">
+                                    {tripPost.accessDescriptionText_3}
+                                </p>
+                            </dd>
+                        </div>
+                    </dl>
+                    <figure class="tripSpots__accessMap">
+                        <iframe src={tripPost.accessMap} width="1280" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        ))}
+    </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+            const accessButton = document.querySelectorAll(".tripSpots__accessButton");
+            const accessContents = document.querySelectorAll(".tripSpots__accessContents");
+
+            accessButton.forEach((accessButton, index) => {
+                accessButton.addEventListener("click", () => {
+                    accessContents[index].classList.toggle("--active");
+                });
+            })
+        });
+</script>
 
 <!-- styleは tripSpots.css -->
 
