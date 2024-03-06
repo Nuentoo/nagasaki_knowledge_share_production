@@ -6,7 +6,6 @@ import TripSpots from '../components/TripSpots.astro';
 import Events from '../components/Events.astro';
 import Youkais from '../components/Youkais.astro';
 import BentTailCats from '../components/BentTailCats.astro';
-import "../styles/mainVisual.css";
 import "../styles/introduction.css";
 import "../styles/tripSpots.css";
 import "../styles/events.css";
@@ -23,3 +22,8 @@ const pageTitle = ""; // <title>
   <Youkais />
   <BentTailCats />
 </BaseLayout>
+
+<script>
+  import { calousel } from "../scripts/carousel.js";
+  calousel();
+</script>
