@@ -1,5 +1,5 @@
 html {
-
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,68 +17,6 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.4;
-  }
-}
-
-/* Navigation style SP */
-
-.hamburger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 40px;
-  height: 40px;
-  .line {
-    height: 5px;
-    background-color: black;
-    align-content: flex-end
-  }
-}
-
-
-.navLinks {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: black;
-  display: none;
-  margin: 0;
-  a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  a:hover,
-  a:focus {
-    opacity: 0.5;
-  }
-}
-
-.expanded {
-  display: unset;
-}
-
-/* Navigation style PC */
-
-@media screen and (min-width: 636px) {
-  .hamburger {
-    display: none;
-  }
-  .navLinks {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-    a {
-      display: inline-block;
-      padding: 15px 20px;
-    }
   }
 }
 
