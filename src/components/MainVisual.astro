@@ -1,16 +1,11 @@
 ---
+import MainVisualCard from './MainVisualCard.astro';
+const title = {
+    first: 'NAGASAKI',
+    second: 'CHARM',
+}
 ---
-<!-- ここにHTML -->
-<section class="mainVisual">
-    <h1 class="title">NAGASAKI CHARM</h1>
-</section>
-
-<!-- styleは mainVisual.css -->
-<style>
-</style>
-
-<!-- DOM操作は carousel.js -->
-<script>
-    import { calouselMv } from "../scripts/carousel.js";
-    calouselMv();
-</script>
+<MainVisualCard
+    titleFirst = {title.first}
+    titleSecond = {title.second}
+/>
