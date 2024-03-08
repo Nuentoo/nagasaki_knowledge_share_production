@@ -85,11 +85,6 @@
     margin-top: 14px;
     line-height: 1.6;
     font-weight: bold;
-
-    .tripSpots {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 960px;
 }
 
 .tripSpots__titleWrap {
@@ -331,4 +326,82 @@
     overflow: hidden;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+
+/* TripSpots style PC */
+@media screen and (min-width: 650px) {
+    .tripSpots__title::after{
+        font-size: 14px;
+        width: 72px;
+        right: -4px;
+        bottom: -26px;
+        line-height: 72px;
+        transform: rotate( 26deg );
+    }
+
+    .tripSpots__title {
+        font-size: 30px;
+    }
+
+    .tripSpots__title span {
+        font-size: 50px;
+    }
+
+    .tripSpots__backgroundImg{
+        height: 350px;
+    }
+
+    .tripSpots__subtitle {
+        font-size: 45px;
+    }
+
+    .tripSpots__cityName {
+        font-size: 18px;
+    }
+
+    .tripSpots__contentTitle {
+        font-size: 26px;
+    }
+
+    .tripSpots__contentText {
+        font-size: 14px;
+    }
+
+    .tripSpots__other {
+        font-size: 18px;
+    }
+
+    .tripSpots__otherImage {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tripSpots__contentWrap {
+        margin-top: 30px;
+    }
+
+    .tripSpots__contentText {
+        margin-top: 18px;
+    }
+
+    .tripSpots__accessButton {
+        font-size: 14px;
+    }
+
+    .tripSpots__accessDescription {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .tripSpots__accessDescriptionTitle {
+        font-size: 12px;
+        width: 86px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .tripSpots__backgroundImg{
+        border-radius: 10px;
+    }
 }
