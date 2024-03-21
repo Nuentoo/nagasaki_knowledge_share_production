@@ -8,6 +8,7 @@ export const hamburgerToggle = () => {
     const navList = $('[data-headerItem = "nav"]');
     const navItems = $('[data-headerItem = "navItems"]');
     const toggleScrollable = () => {
+        // bodyの高さを100%にしてスクロールしないよう固定、再度発火で固定を解除
         if ($("body").css("overflow") === "hidden") {
             $("body").css({height:"", overflow:""});
         } else {
