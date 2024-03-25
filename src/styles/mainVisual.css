@@ -2,6 +2,7 @@
 
 .mainVisual {
     height: 517px;
+    overflow: hidden;
     position: relative;
     width: 100%;
 }
