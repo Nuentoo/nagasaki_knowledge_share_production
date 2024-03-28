@@ -1,0 +1,9 @@
+---
+const { pageName , platformName } = Astro.props;
+---
+<!-- ここにHTML -->
+<li class="footer_list">
+  <a href={`/${pageName}`}>{platformName}</a>
+</li>
+
+<!-- styleは global.css -->
