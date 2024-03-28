@@ -29,11 +29,18 @@ body {
   gap: 10px;
   .footer_list {
     padding: 5px;
-    border: dashed black;
+    border: 2px dashed black;
     border-radius: 10px;
     a:hover {
       opacity: 0.5;
     }
+  }
+}
+
+.footer_wrap:not(:first-of-type) {
+  margin-top: 25px;
+  .footer_list {
+    border-color: chocolate;
   }
 }
 

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MainVisual from "../components/MainVisual.astro";
+import Introduction from '../components/Introduction.astro';
+import TripSpots from '../components/TripSpots.astro';
+import Events from '../components/Events_naito.astro';
+import Youkais from '../components/Youkais.astro';
+import BentTailCats from '../components/BentTailCats.astro';
+import "../styles/introduction.css";
+import "../styles/tripSpots.css";
+import "../styles/events.css";
+import "../styles/youkais.css";
+import "../styles/bentTailCats.css";
+import "../styles/header.css";
+const pageTitle = "NAGASAKI CHARM PROTO"; // <title>
+---
+<BaseLayout pageTitle={pageTitle}>
+  <MainVisual />
+  <!-- <Introduction /> -->
+  <TripSpots />
+  <Events />
+  <!-- <Youkais /> -->
+  <BentTailCats />
+</BaseLayout>
+
+<script>
+  import { calousel } from "../scripts/carousel.js";
+  calousel();
+</script>
