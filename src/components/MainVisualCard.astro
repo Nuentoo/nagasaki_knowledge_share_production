@@ -13,14 +13,14 @@ type ImageMetaObject = {
 };
 
 const { titleFirst, titleSecond }: Props = Astro.props;
-const imagesSp: ImageMetaObject = import.meta.glob<{ default: ImageMetadata }>('/src/assets/mainVisual/sp/*.{jpeg,jpg,png,gif}');
-const imagesPc: ImageMetaObject = import.meta.glob<{ default: ImageMetadata }>('/src/assets/mainVisual/pc/*.{jpeg,jpg,png,gif}');
+const imagesSp: ImageMetaObject = import.meta.glob<{ default: ImageMetadata }>('../assets/mainVisual/sp/*.{jpeg,jpg,png,gif}');
+const imagesPc: ImageMetaObject = import.meta.glob<{ default: ImageMetadata }>('../assets/mainVisual/pc/*.{jpeg,jpg,png,gif}');
 // if (!(Object.values(imagesSp) && Object.values(imagesPc))) throw new Error('does not exist in glob: "src/assets/mainVisual/*');
 const imagesSpPath = Object.keys(imagesSp);
 const imagesPcPath = Object.keys(imagesPc);
 // const optimizedBackground = await getImage({src: imagesSp[0](), format: 'webp'})
 ---
-<section class="mainVisual">
+<section class="mainVisual" transition:animate="slide">
     <h1 class="mainVisual_title"><span class="mainVisual_title__vertical">{titleFirst}</span>&hairsp;{titleSecond}</h1>
     <div class="slider_container">
         <ul class="mainVisual_container" data-js="carousel">  <!-- data-sp-length=`${imagesSpPath.length}` data-pc-length=`${imagesPcPath.length}` -->

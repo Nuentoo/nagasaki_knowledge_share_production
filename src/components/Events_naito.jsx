@@ -4,9 +4,7 @@ const seasonCache = new Map();
 const areaCache = new Map();
 
 const updateCache = (cache, uniqueTag, keyName) => {
-  if (!cache.has(uniqueTag)) {
-    return cache.set(uniqueTag, keyName);
-  }
+  if (!cache.has(uniqueTag)) return cache.set(uniqueTag, keyName);
   const cacheKeys = [...cache.keys()];
   if (cacheKeys.includes(uniqueTag)) cache.delete(uniqueTag);
 }

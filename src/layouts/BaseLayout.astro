@@ -1,9 +1,10 @@
 ---
-// import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/reset.css";
 import "../styles/global.css";
+import "../styles/header.css";
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">
@@ -17,7 +18,7 @@ const { pageTitle } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <ViewTransitions /> -->
+    <ViewTransitions />
   </head>
   <body>
     <Header />

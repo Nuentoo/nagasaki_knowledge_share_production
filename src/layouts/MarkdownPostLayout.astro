@@ -1,0 +1,67 @@
+---
+import type { ImageMetadata } from 'astro';
+import { fade } from "astro:transitions";
+import { Image } from 'astro:assets';
+import BaseLayout from "./BaseLayout.astro";
+import MainVisual from "../components/MainVisual.astro";
+import YoukaisCard from "../components/YoukaisCard.astro";
+const { frontmatter } = Astro.props;
+const allPosts = await Astro.glob('../pages/posts/youkais/*.md');
+const globImages = import.meta.glob<{ default: ImageMetadata }>('../assets/youkais/*.{jpeg,jpg,png,gif}');
+const globImagesPath = Object.keys(globImages);
+const matchImagesPath = globImagesPath.filter((imgPath) => frontmatter.fileName === imgPath.match(/([^/]+?)(\d+)/)?.[1]);
+const otherPosts = allPosts.filter((post) => frontmatter.fileName !== post.frontmatter.fileName);
+---
+<BaseLayout pageTitle={frontmatter.title}>
+    <MainVisual />
+    <section class="post" transition:animate="fade" >
+        <h3>{frontmatter.name}</h3>
+        <p>written day : {frontmatter.pubDate.slice(0, 10)}</p>
+        <p set:html={frontmatter.discribe}></p>
+        <p>{frontmatter.reservationHours && `reservationHours : ${frontmatter.reservationHours}`}
+            <a href={frontmatter.reservationUrl}>{frontmatter.reservationUrl && 'reservation required &#9432'}</a>
+        </p>
+        <p>{frontmatter.openingHours && `openingHours : ${frontmatter.openingHours}`}</p>
+        <p set:html={frontmatter.fee}>fee : </p>
+        <p>address : {frontmatter.address}</p>
+        <a href={frontmatter.link}>{frontmatter.link && `url : ${frontmatter.link}`}</a>
+        <p>{frontmatter.link && `tel : ${frontmatter.tel}`}</p>
+        <ul class="post_list">
+            {
+                matchImagesPath.map((image) => <li><Image src={globImages[image]()} width="300" alt="" /></li>)
+            }
+        </ul>
+        <!-- <slot /> -->
+    </section>
+    <p style="text-align: center">↓ other trip spot ↓</p>
+    <YoukaisCard posts={otherPosts}/>
+</BaseLayout>
+<style>
+    .post {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 50px 40px;
+    }
+    .post_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    a {
+        color: #00539F;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        margin: 0.25em;
+        border: dotted 1px #a1a1a1;
+        border-radius: .5em;
+        padding: .5em 1em;
+        font-size: 1.15em;
+        background-color: #F8FCFD;
+    }
+</style>

@@ -1,10 +1,8 @@
 ---
+import YokaisCard from './YoukaisCard.astro';
+const allPosts = await Astro.glob('../pages/posts/youkais/*.md');
 ---
-<!-- ここにHTML -->
 <section class="youkais" id="youkais">
     <h2 class="subTitle">長崎妖怪</h2>
+    <YokaisCard posts={allPosts}/>
 </section>
-
-<!-- styleは youkais.css -->
-
-<!-- DOM操作は hoge.js -->
