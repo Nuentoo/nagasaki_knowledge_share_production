@@ -1,0 +1,28 @@
+---
+const { posts } = Astro.props;
+---
+<ul class="tags">
+    {posts.map((post) => <li class="tag"><a href={post.url}>{post.frontmatter.title}</a></li>)}
+</ul>
+
+<style>
+a {
+    color: #00539F;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+}
+</style>
